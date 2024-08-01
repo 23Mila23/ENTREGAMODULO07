@@ -98,27 +98,3 @@ describe("Lógica de ganar o perder", () => {
         expect(checkIfPlayerWins()).toBe(false)
     })
     })
-
-// importarlo todo con import * as motor from './motor'
-//si hay funciones que se repiten como spyON importar beforeEach:
-// import {beforeEach} from "vitest";
-
-//en el caso de querer forzar a la funcion mathRandom a que devuelva un número concreto, hay un cambio en spyON: const spyON = vi.spyOn(global.Math (es una funcion global de js, por eso se pone asi), "random").mockReturnValue(7)
-
-//describe("getRandomNumber", () => {
-//beforeEach (() => {
-//vi.spyOn(motor, "getRandomNumber", "get").mockReturnValue(7);
-//});
-
-//it("Descripción de lo que probamos"), () => {
-//Arrange
-//Definimos las constantes que necesitamos
-//utilizar const spyON = vi.spyOn(motor, "getRandomNumber", "get").mockReturnValue(7)
-
-//Act
-//No utilizar mas de una función, si no no es una prueba unitaria
-
-//Assert
-//expect(numero).toBe(7);
-//}
-//})
