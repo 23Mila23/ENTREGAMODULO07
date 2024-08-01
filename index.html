@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego siete y medio</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>JUEGO DE SIETE Y MEDIO</h1>
+      <div id="buttons-container">
+        <div>
+          <button id="dame-carta">Dame Carta</button>
+        </div>
+        <div>
+          <button id="plantarse">Plantarse</button>
+        </div>
+      </div>
+      <div id="cards-container">
+        <img
+          id="carta"
+          src="https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/back.jpg"
+          alt="Carta"
+        />
+      </div>
+      <div class="puntuacion-container">
+        <p>Puntuación:</p>
+        <div id="puntuacion"></div>
+        <div id="mensaje"></div>
+      </div>
+      <div id="nueva-partida-container">
+        <button id="nueva-partida">Nueva Partida</button>
+        <button id="curioso">¿Curioso?</button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
