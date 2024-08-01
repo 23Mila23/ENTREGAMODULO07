@@ -1,12 +1,12 @@
-import { setPuntuacion } from './modelo';
+import { setPuntuacion, puntuacion, puntuacionMaxima } from './modelo';
 
 import { dameCarta } from './main';
 
-import { botonCurioso } from './ui';
+import { disableCuriosoButton } from './ui';
 
-export const getRandomNumber = () => {
-  let numero = Math.ceil(Math.random() * 10);
-
+export const getRandomNumber = () : number => {
+  let numero : number = Math.ceil(Math.random() * 10);
+  
   if (numero > 7) {
     numero = numero + 2;
   }
@@ -22,7 +22,17 @@ export const calcularYGuardarPuntuacion = (randomNumber: number) => {
   }
 };
 
+export const checkIfPlayerWins = () : boolean => {
+  return puntuacion === 7.5 ? true : false
+ }
+
+ export const checkIfPlayerLoses = () : boolean => {
+  
+  return puntuacion > puntuacionMaxima ? true : false
+ }
 export const gestionarCurioso = () => {
   dameCarta();
-  botonCurioso.disabled = true;
+  disableCuriosoButton()
 };
+
+

@@ -1,17 +1,17 @@
 import { reiniciarPuntuacion} from './modelo';
 
-import { calcularYGuardarPuntuacion,  gestionarCurioso, getRandomNumber } from './motor';
+import { calcularYGuardarPuntuacion,  gestionarCurioso, getRandomNumber, checkIfPlayerWins, checkIfPlayerLoses } from './motor';
 
 import {
   muestraPuntuacion,
   muestraCarta,
   mePlanto,
-  controlarGameOver,
+  showGameOver,
   botonDameCarta,
   botonPlantarse,
   botonNuevaPartida,
   botonCurioso,
-  ganarJuego,
+  showGanarJuego,
   reiniciarCarta,
   reiniciarGameOver,
   hideNuevaPartidaButton,
@@ -29,9 +29,13 @@ export const dameCarta = () => {
 
   muestraPuntuacion();
 
-  ganarJuego();
+  if(checkIfPlayerWins()){
+    showGanarJuego();
+  }
 
-  controlarGameOver();
+  if(checkIfPlayerLoses()){
+    showGameOver();
+  }
 };
 
 const reiniciarPartida = () => {
@@ -50,6 +54,6 @@ botonDameCarta?.addEventListener('click', dameCarta);
 
 botonPlantarse?.addEventListener('click', mePlanto);
 
-botonNuevaPartida.addEventListener('click', reiniciarPartida);
+botonNuevaPartida?.addEventListener('click', reiniciarPartida);
 
 botonCurioso?.addEventListener('click', gestionarCurioso);
